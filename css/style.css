@@ -1,0 +1,349 @@
+@charset "utf-8";
+
+:root {
+    /* --autumn-brown: #8B4513; */
+    --autumn-brown: #db6918;
+    --autumn-orange: #f79955;
+    --autumn-gold: #DAA520;
+    --autumn-beige: #F5DEB3;
+    --autumn-red: #A52A2A;
+    --text-color: #333333;
+    --light-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    background-color: #fcfaf7;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--autumn-brown);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo span {
+    /* color: var(--autumn-gold); */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--autumn-gold);
+}
+
+.hero {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/600') center/cover no-repeat; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* color: white; */
+    padding-top: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--autumn-orange);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--autumn-gold);
+}
+
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--autumn-brown);
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background-color: var(--autumn-gold);
+    bottom: -10px;
+    left: 20%;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-image {
+    height: 200px;
+    background-color: var(--autumn-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.service-content {
+    padding: 2rem;
+}
+
+.service-content h3 {
+    color: var(--autumn-brown);
+    margin-bottom: 1rem;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image {
+    background-color: var(--autumn-beige);
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--autumn-brown);
+    font-size: 2rem;
+}
+
+.about-text h3 {
+    color: var(--autumn-brown);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-content {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: var(--autumn-brown);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    background-color: var(--autumn-brown);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--autumn-red);
+}
+
+footer {
+    background-color: var(--autumn-brown);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.footer-links li {
+    margin: 0 1rem;
+}
+
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+    color: var(--autumn-gold);
+}
+
+.social-icons {
+    margin: 1.5rem 0;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--autumn-gold);
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 300px;
+        order: -1;
+    }
+}
